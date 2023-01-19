@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Downloading ngrok
         run: |
-          Invoke-WebRequest https://github.com/worldsoft998/remotedesktop/blob/main/Resources/ngrok.zip -OutFile ngrok.zip
-          Invoke-WebRequest https://github.com/worldsoft998/remotedesktop/blob/main/Resources/start.bat -OutFile start.bat
+          Invoke-WebRequest https://raw.githubusercontent.com/romain09/AWS-RDP/main/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+          Invoke-WebRequest https://raw.githubusercontent.com/romain09/AWS-RDP/main/start.bat -OutFile start.bat
 
       - name: Extracting ngrok Files
         run: Expand-Archive ngrok.zip
@@ -34,5 +34,5 @@ jobs:
 
       - name: TimeCount
         run: |
-          Invoke-WebRequest https://github.com/worldsoft998/remotedesktop/blob/main/Resources/loop.ps1 -OutFile loop.ps1
+          Invoke-WebRequest https://raw.githubusercontent.com/romain09/AWS-RDP/main/loop.ps1 -OutFile loop.ps1
           ./loop.ps1
